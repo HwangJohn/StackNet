@@ -223,6 +223,10 @@ def main():
         ######### Load files ############
 
         X,X_test,y,ids=load_data_sparse (data_path="input/")# you might need to change that to whatever folder the json files are in
+        X = X[:500]
+        X_test = X_test[:500]
+        y = y[:500]
+        ids = ids[:500]
         ids= np.array([int(k)+68119576 for k in ids ]) # we add the id value we removed before for scaling reasons.
         print(X.shape, X_test.shape) 
         
